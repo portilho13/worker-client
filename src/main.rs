@@ -11,8 +11,6 @@ fn main() {
     let folder = &args[0];
 
     let data = files::collect_entries(folder.to_string()).unwrap();
-
-    println!("{:?}", data);
     
     let conn = tunnel::create_tcp_conn(SERVER_TCP_IP.to_string()).unwrap();
     
